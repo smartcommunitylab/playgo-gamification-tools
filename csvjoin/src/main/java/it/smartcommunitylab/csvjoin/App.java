@@ -7,12 +7,13 @@ import java.io.FileWriter;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        final String weekNumber = "24";
+        final String weekNumber = "21";
 
+        String rootPath = "/home/mirko/data/PROGETTI/gamification/p&g2019/classifiche";
         String commonPath =
-                "/home/mirko/data/PROGETTI/gamification/p&g2017/week" + weekNumber + "/";
+                rootPath + "/week" + weekNumber + "/";
         String path1 = commonPath + "classifica_w" + weekNumber + ".csv";
-        String path2 = commonPath + "players.csv";
+        String path2 = rootPath + "/players.csv";
 
         BufferedReader breader = new BufferedReader(new FileReader(path1));
         FileWriter writer =
