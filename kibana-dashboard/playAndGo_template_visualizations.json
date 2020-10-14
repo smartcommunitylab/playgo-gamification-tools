@@ -1,0 +1,483 @@
+[
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: giocatori attivi per giorno",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"field\":\"playerId\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"d\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per day\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Unique count of playerId\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":false,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Unique count of playerId\"},\"type\":\"value\"}],\"yAxis\":{}},\"title\":\"Play&Go 2017: giocatori attivi per giorno\",\"type\":\"line\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of playerId\":\"#EF843C\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"Action\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: cumulativo recommendation",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{},\"schema\":{\"group\":\"none\",\"name\":\"metricAgg\",\"title\":\"Metric Agg\",\"hideCustomLabel\":true,\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\"],\"min\":0,\"max\":null,\"editor\":false,\"params\":[],\"deprecate\":false},\"type\":\"count\"},\"metricAgg\":\"custom\"},\"schema\":\"metric\",\"type\":\"cumulative_sum\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"d\",\"min_doc_count\":0},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per day\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Cumulative Sum of Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Cumulative Sum of Count\"},\"type\":\"value\"}]},\"title\":\"Play&Go 2017: cumulativo recommendation\",\"type\":\"line\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"recommendation\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: giocate giornaliere per tipo",
+      "visState": "{\"title\":\"Play&Go 2017: giocate giornaliere per tipo\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"mode\":\"grouped\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"log\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"value\"}],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"actionName\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"executionTime\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"survey_complete\":\"#E5AC0E\",\"scogei_classification\":\"#629E51\",\"start_survey_complete\":\"#F2C96D\",\"app_sent_recommandation\":\"#BA43A9\",\"checkin_notte_dei_ricercatori\":\"#0A50A1\",\"save_itinerary\":\"#629E51\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Sustainable Km",
+      "visState": "{\"title\":\"Play&Go 2017: Sustainable Km\",\"type\":\"metric\",\"params\":{\"fontSize\":\"36\",\"handleNoResults\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"deltaScore\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"conceptName: \\\"Walk_Km\\\" OR conceptName: \\\"Bike_Km\\\" OR conceptName: \\\"Bus_Km\\\" OR conceptName: \\\"Train_Km\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Grafico_Cumulativo_Tipi_Azione",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{},\"schema\":{\"group\":\"none\",\"name\":\"metricAgg\",\"title\":\"Metric Agg\",\"hideCustomLabel\":true,\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\"],\"min\":0,\"max\":null,\"editor\":false,\"params\":[],\"deprecate\":false},\"type\":\"count\"},\"metricAgg\":\"custom\"},\"schema\":\"metric\",\"type\":\"cumulative_sum\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"field\":\"actionName\",\"order\":\"desc\",\"orderBy\":\"_term\",\"size\":20},\"schema\":\"group\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"d\",\"min_doc_count\":0},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per day\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Cumulative Sum of Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Cumulative Sum of Count\"},\"type\":\"value\"}]},\"title\":\"Play&Go 2017: Grafico_Cumulativo_Tipi_Azione\",\"type\":\"line\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"start_survey_complete\":\"#F2C96D\",\"save_itinerary\":\"#629E51\",\"checkin_notte_dei_ricercatori\":\"#0A50A1\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Weekly Km per mode",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"field\":\"deltaScore\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"field\":\"conceptName\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"w\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":200},\"position\":\"left\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per week\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Sum of deltaScore\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":true,\"rotate\":75,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"bottom\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Sum of deltaScore\"},\"type\":\"value\"}]},\"title\":\"Play&Go 2017: Weekly Km per mode\",\"type\":\"histogram\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Walk_Km\":\"#7EB26D\",\"Bike_Km\":\"#E0F9D7\",\"Train_Km\":\"#0A50A1\",\"Bus_Km\":\"#82B5D8\",\"Car_Km\":\"#EA6460\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"Walk_Km OR Bike_Km OR Bus_Km OR Train_Km OR Car_Km\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: cumulativo azioni",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{},\"schema\":{\"group\":\"none\",\"name\":\"metricAgg\",\"title\":\"Metric Agg\",\"hideCustomLabel\":true,\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\"],\"min\":0,\"max\":null,\"editor\":false,\"params\":[],\"deprecate\":false},\"type\":\"count\"},\"metricAgg\":\"custom\"},\"schema\":\"metric\",\"type\":\"cumulative_sum\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"d\",\"min_doc_count\":0},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per day\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Cumulative Sum of Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Cumulative Sum of Count\"},\"type\":\"value\"}]},\"title\":\"Play&Go 2017: cumulativo azioni\",\"type\":\"line\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"Action\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Distribuzione azioni per tipo",
+      "visState": "{\"title\":\"Play&Go 2017: Distribuzione azioni per tipo\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"actionName\",\"size\":50,\"order\":\"asc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"save_itinerary\":\"#7EB26D\",\"start_survey_complete\":\"#F2C96D\",\"app_sent_recommandation\":\"#D683CE\",\"checkin_notte_dei_ricercatori\":\"#0A50A1\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale Azioni",
+      "visState": "{\"title\":\"Play&Go 2017: Totale Azioni\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"_type:\\\"Action\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Impact Zero Trips",
+      "visState": "{\"title\":\"Play&Go 2017: Impact Zero Trips\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"deltaScore\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"conceptName: \\\"ZeroImpact_Trips\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Sustainable Trips",
+      "visState": "{\"title\":\"Play&Go 2017: Sustainable Trips\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"deltaScore\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"conceptName: \\\"NoCar_Trips\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: giocate per settimana",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"\"},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"168h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"w\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per week\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":false,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}],\"yAxis\":{}},\"title\":\"Play&Go 2017: giocate per settimana\",\"type\":\"histogram\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of playerId\":\"#EF843C\",\"Count\":\"#5195CE\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"Action\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: giocate per utente",
+      "visState": "{\"title\":\"Play&Go 2017: giocate per utente\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"mode\":\"stacked\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"value\"}],\"yAxis\":{}},\"aggs\":[{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"playerId\",\"size\":200,\"order\":\"desc\",\"orderBy\":\"2\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"type:\\\"Action\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Impact Zero Km",
+      "visState": "{\"title\":\"Play&Go 2017: Impact Zero Km\",\"type\":\"metric\",\"params\":{\"fontSize\":\"36\",\"handleNoResults\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"deltaScore\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"conceptName: \\\"Walk_Km\\\" OR conceptName: \\\"Bike_Km\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: utenti registrati per settimana",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"w\",\"min_doc_count\":0},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per week\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":false,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}],\"yAxis\":{}},\"title\":\"Play&Go 2017: utenti registrati per settimana\",\"type\":\"histogram\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of playerId\":\"#EF843C\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"usercreation\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: cumulativo questionario iniziale",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{},\"schema\":{\"group\":\"none\",\"name\":\"metricAgg\",\"title\":\"Metric Agg\",\"hideCustomLabel\":true,\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\"],\"min\":0,\"max\":null,\"editor\":false,\"params\":[],\"deprecate\":false},\"type\":\"count\"},\"metricAgg\":\"custom\"},\"schema\":\"metric\",\"type\":\"cumulative_sum\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"d\",\"min_doc_count\":0},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per day\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Cumulative Sum of Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Cumulative Sum of Count\"},\"type\":\"value\"}]},\"title\":\"Play&Go 2017: cumulativo questionario iniziale\",\"type\":\"line\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"start_survey_complete\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale questionari iniziali",
+      "visState": "{\"title\":\"Play&Go 2017: Totale questionari iniziali\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"start_survey_complete\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale inviti amici",
+      "visState": "{\"title\":\"Play&Go 2017: Totale inviti amici\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"recommendation\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale check-in Notte dei Ricercatori",
+      "visState": "{\"title\":\"Play&Go 2017: Totale check-in Notte dei Ricercatori\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"_type:\\\"Action\\\" AND checkin_notte_dei_ricercatori\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale Sfide Completate",
+      "visState": "{\"title\":\"Play&Go 2017: Totale Sfide Completate\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"eventType:\\\"ChallengeCompleted\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Challenge assegnate",
+      "visState": "{\"title\":\"Play&Go 2017: Challenge assegnate\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"ChallengeAssigned\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale questionari finali",
+      "visState": "{\"title\":\"Play&Go 2017: Totale questionari finali\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"end_survey_complete\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale questionari \"last\"",
+      "visState": "{\"title\":\"Play&Go 2017: Totale questionari \\\"last\\\"\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"last_survey_complete\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: giocate per giorno",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"\"},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"d\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per day\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":false,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}],\"yAxis\":{}},\"title\":\"Play&Go 2017: giocate per giorno\",\"type\":\"line\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of playerId\":\"#EF843C\",\"Count\":\"#5195CE\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"Action\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale Viaggi Validi",
+      "visState": "{\"title\":\"Play&Go 2017: Totale Viaggi Validi\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"_type:\\\"Action\\\" AND save_itinerary\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Totale Viaggi Validi",
+      "visState": "{\"title\":\"Play&Go 2017: Totale Viaggi Validi\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"_type:\\\"Action\\\" AND save_itinerary\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: utenti registrati",
+      "visState": "{\"title\":\"Play&Go 2017: utenti registrati\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"45\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"playerId\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: utenti registrati per giorno",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{},\"schema\":{\"group\":\"none\",\"name\":\"metricAgg\",\"title\":\"Metric Agg\",\"hideCustomLabel\":true,\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\"],\"min\":0,\"max\":null,\"editor\":false,\"params\":[],\"deprecate\":false},\"type\":\"count\"},\"metricAgg\":\"custom\"},\"schema\":\"metric\",\"type\":\"cumulative_sum\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"d\",\"min_doc_count\":0},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per day\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Cumulative Sum of Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":false,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Cumulative Sum of Count\"},\"type\":\"value\"}],\"yAxis\":{}},\"title\":\"Play&Go 2017: utenti registrati per giorno\",\"type\":\"line\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of playerId\":\"#EF843C\",\"Cumulative Sum of Count\":\"#F9BA8F\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"usercreation\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: giocatori attivi per settimana",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"field\":\"playerId\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"w\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per week\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Unique count of playerId\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":false,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Unique count of playerId\"},\"type\":\"value\"}],\"yAxis\":{}},\"title\":\"Play&Go 2017: giocatori attivi per settimana\",\"type\":\"histogram\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of playerId\":\"#EF843C\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"Action\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: badge per tipologia",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"conceptName\",\"order\":\"desc\",\"orderBy\":\"2\",\"size\":100},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"2\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"mode\":\"stacked\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"value\"}],\"yAxis\":{}},\"title\":\"Play&Go 2017: badge per tipologia\",\"type\":\"histogram\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"key\":\"eventType\",\"negate\":false,\"value\":\"BadgeCollectionConcept\"},\"query\":{\"match\":{\"eventType\":{\"query\":\"BadgeCollectionConcept\",\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Total Km per mode",
+      "visState": "{\"title\":\"Play&Go 2017: Total Km per mode\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"deltaScore\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"conceptName\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Train_Km\":\"#0A50A1\",\"Bus_Km\":\"#64B0C8\",\"Walk_Km\":\"#629E51\",\"Bike_Km\":\"#E0F9D7\",\"Car_Km\":\"#E24D42\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"Walk_Km OR Bike_Km OR Bus_Km OR Train_Km OR Car_Km\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"key\":\"conceptName\",\"value\":\"Bus_Km\",\"disabled\":true,\"negate\":false,\"alias\":null},\"query\":{\"match\":{\"conceptName\":{\"query\":\"Bus_Km\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: utenti attivi",
+      "visState": "{\n  \"title\": \"Play&Go 2017: utenti attivi\",\n  \"type\": \"metric\",\n  \"params\": {\n    \"handleNoResults\": true,\n    \"fontSize\": \"46\"\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"cardinality\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"playerId\"\n      }\n    }\n  ],\n  \"listeners\": {}\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n  \"query\": {\n    \"query_string\": {\n      \"query\": \"Action\",\n      \"analyze_wildcard\": true\n    }\n  },\n  \"filter\": []\n}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Weekend trips by hour of a day",
+      "visState": "{\n  \"aggs\": [\n    {\n      \"enabled\": true,\n      \"id\": \"1\",\n      \"params\": {\n        \"customBucket\": {\n          \"enabled\": true,\n          \"id\": \"1-bucket\",\n          \"params\": {\n            \"customInterval\": \"2h\",\n            \"extended_bounds\": {},\n            \"field\": \"executionTime\",\n            \"interval\": \"d\",\n            \"min_doc_count\": 1\n          },\n          \"schema\": {\n            \"group\": \"none\",\n            \"title\": \"Bucket Agg\",\n            \"name\": \"bucketAgg\",\n            \"aggFilter\": [],\n            \"min\": 0,\n            \"max\": null,\n            \"editor\": false,\n            \"params\": [],\n            \"deprecate\": false\n          },\n          \"type\": \"date_histogram\"\n        },\n        \"customMetric\": {\n          \"enabled\": true,\n          \"id\": \"1-metric\",\n          \"params\": {},\n          \"schema\": {\n            \"group\": \"none\",\n            \"name\": \"metricAgg\",\n            \"title\": \"Metric Agg\",\n            \"aggFilter\": [\n              \"!top_hits\",\n              \"!percentiles\",\n              \"!percentile_ranks\",\n              \"!median\",\n              \"!std_dev\",\n              \"!sum_bucket\",\n              \"!avg_bucket\",\n              \"!min_bucket\",\n              \"!max_bucket\",\n              \"!derivative\",\n              \"!moving_avg\",\n              \"!serial_diff\",\n              \"!cumulative_sum\"\n            ],\n            \"min\": 0,\n            \"max\": null,\n            \"editor\": false,\n            \"params\": [],\n            \"deprecate\": false\n          },\n          \"type\": \"count\"\n        }\n      },\n      \"schema\": \"metric\",\n      \"type\": \"avg_bucket\"\n    },\n    {\n      \"enabled\": true,\n      \"id\": \"2\",\n      \"params\": {\n        \"field\": \"hourOfDay\",\n        \"order\": \"asc\",\n        \"orderBy\": \"_term\",\n        \"size\": 25\n      },\n      \"schema\": \"segment\",\n      \"type\": \"terms\"\n    }\n  ],\n  \"listeners\": {},\n  \"params\": {\n    \"addLegend\": true,\n    \"addTimeMarker\": false,\n    \"addTooltip\": true,\n    \"categoryAxes\": [\n      {\n        \"id\": \"CategoryAxis-1\",\n        \"labels\": {\n          \"show\": true,\n          \"truncate\": 100\n        },\n        \"position\": \"bottom\",\n        \"scale\": {\n          \"type\": \"linear\"\n        },\n        \"show\": true,\n        \"style\": {},\n        \"title\": {\n          \"text\": \"hourOfDay: Ascending\"\n        },\n        \"type\": \"category\"\n      }\n    ],\n    \"defaultYExtents\": false,\n    \"drawLinesBetweenPoints\": true,\n    \"grid\": {\n      \"categoryLines\": false,\n      \"style\": {\n        \"color\": \"#eee\"\n      }\n    },\n    \"interpolate\": \"linear\",\n    \"legendPosition\": \"right\",\n    \"radiusRatio\": 9,\n    \"scale\": \"linear\",\n    \"seriesParams\": [\n      {\n        \"data\": {\n          \"id\": \"1\",\n          \"label\": \"Overall Average of Count\"\n        },\n        \"drawLinesBetweenPoints\": true,\n        \"mode\": \"stacked\",\n        \"show\": \"true\",\n        \"showCircles\": true,\n        \"type\": \"histogram\",\n        \"valueAxis\": \"ValueAxis-1\"\n      }\n    ],\n    \"setYExtents\": false,\n    \"showCircles\": true,\n    \"times\": [],\n    \"valueAxes\": [\n      {\n        \"id\": \"ValueAxis-1\",\n        \"labels\": {\n          \"filter\": false,\n          \"rotate\": 0,\n          \"show\": true,\n          \"truncate\": 100\n        },\n        \"name\": \"LeftAxis-1\",\n        \"position\": \"left\",\n        \"scale\": {\n          \"mode\": \"normal\",\n          \"type\": \"linear\"\n        },\n        \"show\": true,\n        \"style\": {},\n        \"title\": {\n          \"text\": \"Overall Average of Count\"\n        },\n        \"type\": \"value\"\n      }\n    ]\n  },\n  \"title\": \"Play&Go 2017: Weekend trips by hour of a day\",\n  \"type\": \"histogram\"\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"filter\": [\n    {\n      \"meta\": {\n        \"negate\": false,\n        \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n        \"key\": \"actionName\",\n        \"value\": \"save_itinerary\",\n        \"disabled\": false,\n        \"alias\": null\n      },\n      \"query\": {\n        \"match\": {\n          \"actionName\": {\n            \"query\": \"save_itinerary\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    },\n    {\n      \"meta\": {\n        \"negate\": false,\n        \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n        \"field\": \"dayType\",\n        \"key\": \"dayType\",\n        \"value\": \"2\",\n        \"disabled\": false,\n        \"alias\": null\n      },\n      \"script\": {\n        \"script\": {\n          \"inline\": \"boolean compare(Supplier s, def v) {return s.get() == v;}compare(() -> { doc[\\\"executionTime\\\"].date.dayOfWeek < 6 ? 1: 2 }, params.value);\",\n          \"lang\": \"painless\",\n          \"params\": {\n            \"value\": 2\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ],\n  \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"query_string\": {\n      \"query\": \"*\",\n      \"analyze_wildcard\": true\n    }\n  }\n}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Weekday trips by hour of a day",
+      "visState": "{\n  \"aggs\": [\n    {\n      \"enabled\": true,\n      \"id\": \"1\",\n      \"params\": {\n        \"customBucket\": {\n          \"enabled\": true,\n          \"id\": \"1-bucket\",\n          \"params\": {\n            \"customInterval\": \"2h\",\n            \"extended_bounds\": {},\n            \"field\": \"executionTime\",\n            \"interval\": \"d\",\n            \"min_doc_count\": 1\n          },\n          \"schema\": {\n            \"group\": \"none\",\n            \"title\": \"Bucket Agg\",\n            \"name\": \"bucketAgg\",\n            \"aggFilter\": [],\n            \"min\": 0,\n            \"max\": null,\n            \"editor\": false,\n            \"params\": [],\n            \"deprecate\": false\n          },\n          \"type\": \"date_histogram\"\n        },\n        \"customMetric\": {\n          \"enabled\": true,\n          \"id\": \"1-metric\",\n          \"params\": {},\n          \"schema\": {\n            \"group\": \"none\",\n            \"name\": \"metricAgg\",\n            \"title\": \"Metric Agg\",\n            \"aggFilter\": [\n              \"!top_hits\",\n              \"!percentiles\",\n              \"!percentile_ranks\",\n              \"!median\",\n              \"!std_dev\",\n              \"!sum_bucket\",\n              \"!avg_bucket\",\n              \"!min_bucket\",\n              \"!max_bucket\",\n              \"!derivative\",\n              \"!moving_avg\",\n              \"!serial_diff\",\n              \"!cumulative_sum\"\n            ],\n            \"min\": 0,\n            \"max\": null,\n            \"editor\": false,\n            \"params\": [],\n            \"deprecate\": false\n          },\n          \"type\": \"count\"\n        }\n      },\n      \"schema\": \"metric\",\n      \"type\": \"avg_bucket\"\n    },\n    {\n      \"enabled\": true,\n      \"id\": \"2\",\n      \"params\": {\n        \"field\": \"hourOfDay\",\n        \"order\": \"asc\",\n        \"orderBy\": \"_term\",\n        \"size\": 100\n      },\n      \"schema\": \"segment\",\n      \"type\": \"terms\"\n    }\n  ],\n  \"listeners\": {},\n  \"params\": {\n    \"addLegend\": true,\n    \"addTimeMarker\": false,\n    \"addTooltip\": true,\n    \"categoryAxes\": [\n      {\n        \"id\": \"CategoryAxis-1\",\n        \"labels\": {\n          \"show\": true,\n          \"truncate\": 100\n        },\n        \"position\": \"bottom\",\n        \"scale\": {\n          \"type\": \"linear\"\n        },\n        \"show\": true,\n        \"style\": {},\n        \"title\": {\n          \"text\": \"hourOfDay: Ascending\"\n        },\n        \"type\": \"category\"\n      }\n    ],\n    \"defaultYExtents\": false,\n    \"drawLinesBetweenPoints\": true,\n    \"grid\": {\n      \"categoryLines\": false,\n      \"style\": {\n        \"color\": \"#eee\"\n      }\n    },\n    \"interpolate\": \"linear\",\n    \"legendPosition\": \"right\",\n    \"radiusRatio\": 9,\n    \"scale\": \"linear\",\n    \"seriesParams\": [\n      {\n        \"data\": {\n          \"id\": \"1\",\n          \"label\": \"Overall Average of Count\"\n        },\n        \"drawLinesBetweenPoints\": true,\n        \"mode\": \"stacked\",\n        \"show\": \"true\",\n        \"showCircles\": true,\n        \"type\": \"histogram\",\n        \"valueAxis\": \"ValueAxis-1\"\n      }\n    ],\n    \"setYExtents\": false,\n    \"showCircles\": true,\n    \"times\": [],\n    \"valueAxes\": [\n      {\n        \"id\": \"ValueAxis-1\",\n        \"labels\": {\n          \"filter\": false,\n          \"rotate\": 0,\n          \"show\": true,\n          \"truncate\": 100\n        },\n        \"name\": \"LeftAxis-1\",\n        \"position\": \"left\",\n        \"scale\": {\n          \"mode\": \"normal\",\n          \"type\": \"linear\"\n        },\n        \"show\": true,\n        \"style\": {},\n        \"title\": {\n          \"text\": \"Overall Average of Count\"\n        },\n        \"type\": \"value\"\n      }\n    ]\n  },\n  \"title\": \"Play&Go 2017: Weekday trips by hour of a day\",\n  \"type\": \"histogram\"\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"filter\": [\n    {\n      \"$state\": {\n        \"store\": \"appState\"\n      },\n      \"meta\": {\n        \"alias\": null,\n        \"disabled\": false,\n        \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n        \"key\": \"actionName\",\n        \"negate\": false,\n        \"value\": \"save_itinerary\"\n      },\n      \"query\": {\n        \"match\": {\n          \"actionName\": {\n            \"query\": \"save_itinerary\",\n            \"type\": \"phrase\"\n          }\n        }\n      }\n    },\n    {\n      \"meta\": {\n        \"negate\": false,\n        \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n        \"field\": \"dayType\",\n        \"key\": \"dayType\",\n        \"value\": \"1\",\n        \"disabled\": false,\n        \"alias\": null\n      },\n      \"script\": {\n        \"script\": {\n          \"inline\": \"boolean compare(Supplier s, def v) {return s.get() == v;}compare(() -> { doc[\\\"executionTime\\\"].date.dayOfWeek < 6 ? 1: 2 }, params.value);\",\n          \"lang\": \"painless\",\n          \"params\": {\n            \"value\": 1\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ],\n  \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"query_string\": {\n      \"analyze_wildcard\": true,\n      \"query\": \"*\"\n    }\n  }\n}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Trips by day of week",
+      "visState": "{\n  \"aggs\": [\n    {\n      \"enabled\": true,\n      \"id\": \"1\",\n      \"params\": {\n        \"customBucket\": {\n          \"enabled\": true,\n          \"id\": \"1-bucket\",\n          \"params\": {\n            \"customInterval\": \"2h\",\n            \"extended_bounds\": {},\n            \"field\": \"executionTime\",\n            \"interval\": \"w\",\n            \"min_doc_count\": 1\n          },\n          \"schema\": {\n            \"group\": \"none\",\n            \"title\": \"Bucket Agg\",\n            \"name\": \"bucketAgg\",\n            \"aggFilter\": [],\n            \"min\": 0,\n            \"max\": null,\n            \"editor\": false,\n            \"params\": [],\n            \"deprecate\": false\n          },\n          \"type\": \"date_histogram\"\n        },\n        \"customMetric\": {\n          \"enabled\": true,\n          \"id\": \"1-metric\",\n          \"params\": {},\n          \"schema\": {\n            \"group\": \"none\",\n            \"name\": \"metricAgg\",\n            \"title\": \"Metric Agg\",\n            \"aggFilter\": [\n              \"!top_hits\",\n              \"!percentiles\",\n              \"!percentile_ranks\",\n              \"!median\",\n              \"!std_dev\",\n              \"!sum_bucket\",\n              \"!avg_bucket\",\n              \"!min_bucket\",\n              \"!max_bucket\",\n              \"!derivative\",\n              \"!moving_avg\",\n              \"!serial_diff\",\n              \"!cumulative_sum\"\n            ],\n            \"min\": 0,\n            \"max\": null,\n            \"editor\": false,\n            \"params\": [],\n            \"deprecate\": false\n          },\n          \"type\": \"count\"\n        }\n      },\n      \"schema\": \"metric\",\n      \"type\": \"avg_bucket\"\n    },\n    {\n      \"enabled\": true,\n      \"id\": \"2\",\n      \"params\": {\n        \"field\": \"dayOfWeek\",\n        \"order\": \"asc\",\n        \"orderBy\": \"_term\",\n        \"size\": 7\n      },\n      \"schema\": \"segment\",\n      \"type\": \"terms\"\n    }\n  ],\n  \"listeners\": {},\n  \"params\": {\n    \"addLegend\": true,\n    \"addTimeMarker\": false,\n    \"addTooltip\": true,\n    \"categoryAxes\": [\n      {\n        \"id\": \"CategoryAxis-1\",\n        \"labels\": {\n          \"show\": true,\n          \"truncate\": 100\n        },\n        \"position\": \"bottom\",\n        \"scale\": {\n          \"type\": \"linear\"\n        },\n        \"show\": true,\n        \"style\": {},\n        \"title\": {\n          \"text\": \"dayOfWeek: Ascending\"\n        },\n        \"type\": \"category\"\n      }\n    ],\n    \"defaultYExtents\": false,\n    \"drawLinesBetweenPoints\": true,\n    \"grid\": {\n      \"categoryLines\": false,\n      \"style\": {\n        \"color\": \"#eee\"\n      }\n    },\n    \"interpolate\": \"linear\",\n    \"legendPosition\": \"right\",\n    \"radiusRatio\": 9,\n    \"scale\": \"linear\",\n    \"seriesParams\": [\n      {\n        \"data\": {\n          \"id\": \"1\",\n          \"label\": \"Overall Average of Count\"\n        },\n        \"drawLinesBetweenPoints\": true,\n        \"mode\": \"stacked\",\n        \"show\": \"true\",\n        \"showCircles\": true,\n        \"type\": \"histogram\",\n        \"valueAxis\": \"ValueAxis-1\"\n      }\n    ],\n    \"setYExtents\": false,\n    \"showCircles\": true,\n    \"times\": [],\n    \"valueAxes\": [\n      {\n        \"id\": \"ValueAxis-1\",\n        \"labels\": {\n          \"filter\": false,\n          \"rotate\": 0,\n          \"show\": true,\n          \"truncate\": 100\n        },\n        \"name\": \"LeftAxis-1\",\n        \"position\": \"left\",\n        \"scale\": {\n          \"mode\": \"normal\",\n          \"type\": \"linear\"\n        },\n        \"show\": true,\n        \"style\": {},\n        \"title\": {\n          \"text\": \"Overall Average of Count\"\n        },\n        \"type\": \"value\"\n      }\n    ]\n  },\n  \"title\": \"Play&Go 2017: Trips by day of week\",\n  \"type\": \"histogram\"\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"filter\": [\n    {\n      \"meta\": {\n        \"negate\": false,\n        \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n        \"key\": \"actionName\",\n        \"value\": \"save_itinerary\",\n        \"disabled\": false,\n        \"alias\": null\n      },\n      \"query\": {\n        \"match\": {\n          \"actionName\": {\n            \"query\": \"save_itinerary\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ],\n  \"index\": \"gamification-stats-59a91478e4b0c9db6800afaf-*\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"query_string\": {\n      \"analyze_wildcard\": true,\n      \"query\": \"*\"\n    }\n  }\n}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: Total LEGS per mode",
+      "visState": "{\"title\":\"Play&Go 2017: Total LEGS per mode\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"deltaScore\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"conceptName\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Train_Km\":\"#0A50A1\",\"Bus_Km\":\"#64B0C8\",\"Walk_Km\":\"#629E51\",\"Bike_Km\":\"#E0F9D7\",\"Car_Km\":\"#E24D42\",\"Walk_Trips\":\"#7EB26D\",\"Bike_Trips\":\"#E0F9D7\",\"Bus_Trips\":\"#6ED0E0\",\"Train_Trips\":\"#0A50A1\",\"Car_Trips\":\"#EA6460\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"(Walk_Trips OR Bike_Trips OR Bus_Trips OR Train_Trips OR Car_Trips OR PandR_Trips OR Transit_Trips)\",\"analyze_wildcard\":true}},\"filter\":[{\"meta\":{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"key\":\"conceptName\",\"value\":\"Bus_Km\",\"disabled\":true,\"negate\":false,\"alias\":null},\"query\":{\"match\":{\"conceptName\":{\"query\":\"Bus_Km\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_type": "visualization",
+    "_source": {
+      "title": "Play&Go 2017: cumulativo Km sostenibili",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{\"field\":\"deltaScore\"},\"schema\":{\"group\":\"none\",\"name\":\"metricAgg\",\"title\":\"Metric Agg\",\"hideCustomLabel\":true,\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\"],\"min\":0,\"max\":null,\"editor\":false,\"params\":[],\"deprecate\":false},\"type\":\"sum\"},\"metricAgg\":\"custom\"},\"schema\":\"metric\",\"type\":\"cumulative_sum\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"executionTime\",\"interval\":\"d\",\"min_doc_count\":0},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"executionTime per day\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Cumulative Sum of Sum of deltaScore\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Cumulative Sum of Sum of deltaScore\"},\"type\":\"value\"}]},\"title\":\"Play&Go 2017: cumulativo Km sostenibili\",\"type\":\"line\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Cumulative Sum of Count\":\"#962D82\",\"Cumulative Sum of Sum of deltaScore\":\"#508642\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"gamification-stats-59a91478e4b0c9db6800afaf-*\",\"query\":{\"query_string\":{\"query\":\"(conceptName: \\\"Walk_Km\\\" OR conceptName: \\\"Bike_Km\\\" OR conceptName: \\\"Bus_Km\\\" OR conceptName: \\\"Train_Km\\\")\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  }
+]
