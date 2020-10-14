@@ -67,3 +67,7 @@ Instructions to create a new Play&Go Dashboard for a game with id GAMEID:
 11. Run the script `template/mapping_id.py` to bind visualizations produced at step 7 with new dashboard. 
     The ouptut file be `dashboard.mapped.20XX.json`
 12. Import on Kibana file `dashboard.mapped.20XX.json`
+
+**NOTE**
+Script `template/extract_id_title_template.py` is used to produce file `template_mapping_id.csv` (required by script `template/mapping_id.py`)
+The file contains the bind between `id`s and visualization names. At the moment it is created using `Play&Go 2017` as reference
